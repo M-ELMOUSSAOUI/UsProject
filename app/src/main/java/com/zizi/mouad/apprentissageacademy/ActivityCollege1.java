@@ -6,8 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-
-import com.journaldev.navigationviewexpandablelistview.Adapters.College1Page;
+import com.zizi.mouad.apprentissageacademy.Adapters.College1Page;
 
 
 public class ActivityCollege1 extends AppCompatActivity {

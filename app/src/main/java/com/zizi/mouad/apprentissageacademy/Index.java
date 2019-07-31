@@ -1,6 +1,7 @@
 package com.zizi.mouad.apprentissageacademy;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -160,6 +161,8 @@ public class Index extends AppCompatActivity
 
                 switch (selected) {
                     case "1er Année":
+                        Intent inte = new Intent( Index.this, ActivityCollege1.class );
+                        startActivity( inte );
 
 
                         break;

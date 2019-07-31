@@ -13,14 +13,12 @@
         android:id="@+id/tab_col_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/gradiant_logo"
         app:tabIndicatorColor="@android:color/black">
 
         <android.support.design.widget.TabItem
             android:id="@+id/cours_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_course"
             app:tabSelectedTextColor="@android:color/white"
             android:text="coures"
 
@@ -30,7 +28,6 @@
             android:id="@+id/video_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:icon="@drawable/ic_video"
             android:text="Videos"
             app:tabSelectedTextColor="@android:color/white"
             />

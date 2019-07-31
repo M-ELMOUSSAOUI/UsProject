@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.journaldev.navigationviewexpandablelistview.AFragments.CoursCollege2;
-import com.journaldev.navigationviewexpandablelistview.AFragments.VideoCollege2;
+import com.zizi.mouad.apprentissageacademy.AFragments.CoursCollege2;
+import com.zizi.mouad.apprentissageacademy.AFragments.VideoCollege2;
 
 public class College2Page extends FragmentPagerAdapter {
 
