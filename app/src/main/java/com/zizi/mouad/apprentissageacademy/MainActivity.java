@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView PrivacyPolicy;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     // Main function
     @Override
@@ -34,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
 
         //firebase
         mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+                if (currentUser != null) {
+                    Intent intent = new Intent(MainActivity.this, Index.class);
+                    startActivity(intent);
+                }
+            }
+        };
 
         //Instance Objects
         register = findViewById(R.id.Sinscrire);
@@ -116,13 +127,15 @@ public class MainActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            Intent intent = new Intent(MainActivity.this, Index.class);
-            startActivity(intent);
-        }
+        mAuth.addAuthStateListener(mAuthListener);
+
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mAuthListener != null) mAuth.removeAuthStateListener(mAuthListener);
+    }
 }
 
 
