@@ -18,6 +18,7 @@
         <activity
             android:name=".Index"
             android:label="@string/title_activity_index"
+
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PrivacyPolicy"
@@ -25,7 +26,8 @@
         <activity
             android:name=".sinscrire"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

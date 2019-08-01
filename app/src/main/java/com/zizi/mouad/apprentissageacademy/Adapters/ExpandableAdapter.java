@@ -18,6 +18,8 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
+    //icons
+    private int[] icons = {R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery,R.drawable.ic_menu_send,R.drawable.ic_menu_share};
 
     public ExpandableAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
@@ -90,6 +92,7 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
         TextView lblListHeader = (TextView) convertView
                 .findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
+        lblListHeader.setCompoundDrawablesWithIntrinsicBounds(0,0,icons[groupPosition],0);
         lblListHeader.setText(headerTitle);
 
         return convertView;
