@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/gradiant_logo"
+        android:duration="3500"/>
+    <item android:drawable="@drawable/gradiant_black"
+        android:duration="3500"/>
+    <item android:drawable="@drawable/gradiant_black2"
+        android:duration="2500"
+        android:type="linear"/>
+
+</animation-list>

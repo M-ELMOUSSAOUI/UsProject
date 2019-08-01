@@ -2,6 +2,7 @@ package com.zizi.mouad.apprentissageacademy;
 
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -14,63 +15,77 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
+
 import com.zizi.mouad.apprentissageacademy.Adapters.ExpandableAdapter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Index extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    NavigationView navigationView;
 
     private ViewFlipper v_fliper;
     android.widget.ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
+    LinearLayout ll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_index );
-        Toolbar toolbar = findViewById( R.id.toolbar );
-        setSupportActionBar( toolbar );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_index);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        navigationView = findViewById(R.id.nav_view);
+
+        View header = navigationView.getHeaderView(0);
+
+        ll = header.findViewById(R.id.ll1);
+        AnimationDrawable animationDrawable = (AnimationDrawable) ll.getBackground();
+        animationDrawable.setEnterFadeDuration(2000);
+        animationDrawable.setExitFadeDuration(2000);
+        animationDrawable.start();
 
         expListView = findViewById(R.id.expandableListView);
         prepareListData();
         populateExpandableList();
 
-        DrawerLayout drawer = findViewById( R.id.drawer_layout );
-        NavigationView navigationView = findViewById( R.id.nav_view );
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close );
-        drawer.addDrawerListener( toggle );
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
-        navigationView.setNavigationItemSelectedListener( this);
+        navigationView.setNavigationItemSelectedListener(this);
         //set Fliper
         {
-        v_fliper = findViewById( R.id.ViewFliper );
-        int images[] = {R.drawable.logo,R.drawable.logo,R.drawable.logo};
-        //For loop to slide Image View
-        for( int image: images)
-        {
-            FlipperImages(image);
+            v_fliper = findViewById(R.id.ViewFliper);
+            int images[] = {R.drawable.logo, R.drawable.logo, R.drawable.logo};
+            //For loop to slide Image View
+            for (int image : images) {
+                FlipperImages(image);
+            }
         }
-          }
     }
-    public  void FlipperImages(int images){
-        ImageView imageView = new ImageView(this);
-        imageView.setBackgroundResource( images );
 
-        v_fliper.addView( imageView );
-        v_fliper.setFlipInterval( 2000 );
-        v_fliper.setAutoStart( true );
+    public void FlipperImages(int images) {
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(images);
+
+        v_fliper.addView(imageView);
+        v_fliper.setFlipInterval(2000);
+        v_fliper.setAutoStart(true);
 
         //Animation for Fliper image
 
-        v_fliper.setInAnimation(this, android.R.anim.slide_in_left );
-        v_fliper.setOutAnimation(this, android.R.anim.slide_out_right );
+        v_fliper.setInAnimation(this, android.R.anim.slide_in_left);
+        v_fliper.setOutAnimation(this, android.R.anim.slide_out_right);
 
 
     }
@@ -78,9 +93,9 @@ public class Index extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById( R.id.drawer_layout );
-        if (drawer.isDrawerOpen( GravityCompat.START )) {
-            drawer.closeDrawer( GravityCompat.START );
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
@@ -90,7 +105,7 @@ public class Index extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        return super.onOptionsItemSelected( item );
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -100,8 +115,8 @@ public class Index extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        DrawerLayout drawer = findViewById( R.id.drawer_layout );
-        drawer.closeDrawer( GravityCompat.START );
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
@@ -120,7 +135,7 @@ public class Index extends AppCompatActivity
         List<String> College = new ArrayList<String>();
         College.add("1er Année");
         College.add("2éme Année");
-        College.add("1éme Année");
+        College.add("3éme Année");
 
         List<String> hight_school = new ArrayList<String>();
         hight_school.add("Tron Commun");
@@ -161,16 +176,30 @@ public class Index extends AppCompatActivity
 
                 switch (selected) {
                     case "1er Année":
-                        Intent inte = new Intent( Index.this, ActivityCollege1.class );
-                        startActivity( inte );
-
-
+                        Intent inte = new Intent(Index.this, ActivityCollege1.class);
+                        startActivity(inte);
                         break;
-                    case "Deconnexion":
-                        Toast.makeText(Index.this, "you select deconnexion", Toast.LENGTH_SHORT).show();
+                    case "2éme Année":
+                        Intent inte2 = new Intent(Index.this, ActivityCollege2.class);
+                        startActivity(inte2);
+                        break;
+                    case "3éme Année":
+                        Intent inte3 = new Intent(Index.this, ActivityCollege3.class);
+                        startActivity(inte3);
+                        break;
+                    case "Tron Commun":
+                        Intent inte4 = new Intent(Index.this, ActivityLycee1.class);
+                        startActivity(inte4);
+                        break;
+                    case "1er Année bac":
+                        Intent inte5 = new Intent(Index.this, ActivityLycee2.class);
+                        startActivity(inte5);
+                        break;
+                    case "2éme Année bac":
+                        Intent inte6 = new Intent(Index.this, ActivityLycee3.class);
+                        startActivity(inte6);
                         break;
                 }
-
                 return false;
             }
         });

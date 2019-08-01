@@ -1,15 +1,16 @@
 package com.zizi.mouad.apprentissageacademy;
 
-import android.os.Bundle;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import com.zizi.mouad.apprentissageacademy.Adapters.College1Page;
+import android.os.Bundle;
 
 
-public class ActivityCollege1 extends AppCompatActivity {
+import com.zizi.mouad.apprentissageacademy.Adapters.Lycee3Page;
+
+public class ActivityLycee3 extends AppCompatActivity {
     TabLayout tabLayout;
     PagerAdapter pagerAdapter;
     ViewPager viewPager;
@@ -18,21 +19,18 @@ public class ActivityCollege1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_college1);
+        setContentView(R.layout.activity_lycee3);
         //init wideget
-        tabLayout = findViewById(R.id.tab_col_1);
-        viewPager = findViewById(R.id.college1_vp);
-        tabCours = findViewById(R.id.cours_tab);
-        tabVideo = findViewById(R.id.video_tab);
+        tabLayout = findViewById(R.id.tab_lyc_3);
+        viewPager = findViewById(R.id.lycee3_vp);
+        tabCours = findViewById(R.id.cours_tabl3);
+        tabVideo = findViewById(R.id.video_tabl3);
 
-        pagerAdapter = new College1Page(getSupportFragmentManager(),2);
+        pagerAdapter = new Lycee3Page(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
 
 
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
     }
-
-
 }
