@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "357397787055",
+    "firebase_url": "https://apprenstisageaccademy.firebaseio.com",
+    "project_id": "apprenstisageaccademy",
+    "storage_bucket": "apprenstisageaccademy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357397787055:android:7be8e5d1ed1caa96",
+        "android_client_info": {
+          "package_name": "com.zizi.mouad.apprentissageacademy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357397787055-qq8tq7do7688nva2t3eat1bnuk4tv4ru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEbULH6xLAdOJswbhgBHs_IC1JfIVydgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357397787055-qq8tq7do7688nva2t3eat1bnuk4tv4ru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
