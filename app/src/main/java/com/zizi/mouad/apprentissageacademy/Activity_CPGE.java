@@ -28,6 +28,8 @@ public class Activity_CPGE extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity__cpge );
 
+
+
         //init wideget
         tabLayout = findViewById(R.id.tab_cpge);
         viewPager = findViewById(R.id.cpge_vp);
