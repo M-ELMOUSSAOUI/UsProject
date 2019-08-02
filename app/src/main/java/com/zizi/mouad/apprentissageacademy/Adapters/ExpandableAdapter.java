@@ -2,6 +2,7 @@ package com.zizi.mouad.apprentissageacademy.Adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
     //icons
-    private int[] icons = {R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery,R.drawable.ic_menu_send,R.drawable.ic_menu_share,R.drawable.ic_course};
+    private int[] icons = {R.drawable.ic_course,R.drawable.ic_school,R.drawable.ic_mortarboard,R.drawable.ic_phone_book,R.drawable.ic_logout};
 
     public ExpandableAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
@@ -51,15 +52,15 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate( R.layout.list_group_child, null);
         }
 
-        TextView txtListChild = (TextView) convertView
+        TextView txtListChild = convertView
                 .findViewById(R.id.lblListItem);
-
         txtListChild.setText(childText);
         return convertView;
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
+        if (groupPosition == 3) return 0;
         return this._listDataChild.get(this._listDataHeader.get(groupPosition))
                 .size();
     }

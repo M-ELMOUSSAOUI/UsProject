@@ -157,8 +157,8 @@ public class Index extends AppCompatActivity
         unversity.add("ENCG");
         unversity.add("CPGE");
 
-        List<String> Contact = new ArrayList<String>();
-        Contact.add("Contact");
+        /*List<String> Contact = new ArrayList<String>();
+        Contact.add("Contact");*/
 
 
         List<String> Profil = new ArrayList<String>();
@@ -168,7 +168,7 @@ public class Index extends AppCompatActivity
         listDataChild.put(listDataHeader.get(0), College);
         listDataChild.put(listDataHeader.get(1), hight_school);
         listDataChild.put(listDataHeader.get(2), unversity);
-        listDataChild.put(listDataHeader.get(3), Contact);
+        //listDataChild.put(listDataHeader.get(3), Contact);
         listDataChild.put(listDataHeader.get(4), Profil);
     }
 
@@ -224,18 +224,26 @@ public class Index extends AppCompatActivity
                         startActivity(inte10);
                         break;
 
-                    case "Contact":
-                        Intent inte12 = new Intent(Index.this, Contact.class);
-                        startActivity(inte12);
-                        break;
-
                     case "Déconnexion" :
                         mAuth.signOut();
                         Intent inte11 = new Intent(mContext,MainActivity.class);
+                        finishAffinity();
                         startActivity(inte11);
-
-
                 }
+                return false;
+            }
+        });
+
+        expListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView expandableListView, View view, int i, long l) {
+                final String selc = listAdapter.getGroup(i).toString();
+                if (selc.equals("Contact" ))
+                {
+                    Intent inte12 = new Intent(Index.this, Contact.class);
+                    startActivity(inte12);
+                }
+
                 return false;
             }
         });
