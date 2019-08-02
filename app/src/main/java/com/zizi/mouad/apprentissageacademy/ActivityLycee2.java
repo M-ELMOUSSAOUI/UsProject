@@ -20,6 +20,7 @@ public class ActivityLycee2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lycee2);
+
         //init wideget
         tabLayout = findViewById(R.id.tab_lyc_2);
         viewPager = findViewById(R.id.lycee2_vp);

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ActivityCollege2">
+    tools:context=".Activity_ENCG">
+
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_col_2"
+        android:id="@+id/tab_encg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gradiant_logo"
         app:tabIndicatorColor="@android:color/black">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/cours_tab2"
+            android:id="@+id/coursencg_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_course"
@@ -25,7 +27,7 @@
             />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/video_tab2"
+            android:id="@+id/videoencg_tab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_video"
@@ -36,12 +38,9 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/college2_vp"
+        android:id="@+id/encg_vp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
     </androidx.viewpager.widget.ViewPager>
-
-
-
-
 </LinearLayout>

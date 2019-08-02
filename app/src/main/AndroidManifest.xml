@@ -12,13 +12,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityLycee3"></activity>
-        <activity android:name=".ActivityLycee2" />
-        <activity android:name=".ActivityLycee1" />
+
+
+        <activity
+            android:name=".Contact"
+            android:parentActivityName=".Index"/>
+        <activity
+            android:name=".Activity_CPGE"
+            android:parentActivityName=".Index" />
+        <activity
+            android:name=".Activity_ENCG"
+            android:parentActivityName=".Index" />
+        <activity
+            android:name=".Activity_ENSA"
+            android:parentActivityName=".Index" />
+        <activity
+            android:name=".ActivityLycee3"
+            android:parentActivityName=".Index" />
+        <activity
+            android:name=".ActivityLycee2"
+            android:parentActivityName=".Index" />
+        <activity
+            android:name=".ActivityLycee1"
+            android:parentActivityName=".Index" />
         <activity
             android:name=".Index"
             android:label="@string/title_activity_index"
-
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PrivacyPolicy"
@@ -26,8 +45,7 @@
         <activity
             android:name=".sinscrire"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity"
-            >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

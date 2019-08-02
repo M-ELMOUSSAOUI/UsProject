@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".Activity_ENSA">
+
+
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tab_ensa"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradiant_logo"
+    app:tabIndicatorColor="@android:color/black">
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/cours_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_course"
+        app:tabSelectedTextColor="@android:color/white"
+        android:text="coures"
+
+        />
+
+    <com.google.android.material.tabs.TabItem
+        android:id="@+id/video_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/ic_video"
+        android:text="Videos"
+        app:tabSelectedTextColor="@android:color/white"
+        />
+
+</com.google.android.material.tabs.TabLayout>
+
+<androidx.viewpager.widget.ViewPager
+    android:id="@+id/Ensa_vp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>

@@ -35,4 +35,8 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="title_activity__ens">Activity_ENSA</string>
+    <string name="title_activity__encg">Activity_ENCG</string>
+    <string name="title_activity__cpge">Activity_CPGE</string>
+    <string name="title_activity_contact">Contact</string>
 </resources>

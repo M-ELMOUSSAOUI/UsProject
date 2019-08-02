@@ -70,10 +70,10 @@ public class Index extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        //set Fliper
+        // set Fliper
         {
             v_fliper = findViewById(R.id.ViewFliper);
-            int images[] = {R.drawable.logo, R.drawable.logo, R.drawable.logo};
+            int[] images = {R.drawable.slide_1, R.drawable.slide_2, R.drawable.slide_3};
             //For loop to slide Image View
             for (int image : images) {
                 FlipperImages(image);
@@ -88,6 +88,7 @@ public class Index extends AppCompatActivity
         v_fliper.addView(imageView);
         v_fliper.setFlipInterval(2000);
         v_fliper.setAutoStart(true);
+
 
         //Animation for Fliper image
 
@@ -153,9 +154,8 @@ public class Index extends AppCompatActivity
 
         List<String> unversity = new ArrayList<String>();
         unversity.add("ENSA");
-        unversity.add("ENSG");
-        unversity.add("ENSAS");
-        unversity.add("Faculté");
+        unversity.add("ENCG");
+        unversity.add("CPGE");
 
         List<String> Contact = new ArrayList<String>();
         Contact.add("Contact");
@@ -164,7 +164,8 @@ public class Index extends AppCompatActivity
         List<String> Profil = new ArrayList<String>();
         Profil.add("Déconnexion");
 
-        listDataChild.put(listDataHeader.get(0), College); // Header, Child data
+        // Header, Child data
+        listDataChild.put(listDataHeader.get(0), College);
         listDataChild.put(listDataHeader.get(1), hight_school);
         listDataChild.put(listDataHeader.get(2), unversity);
         listDataChild.put(listDataHeader.get(3), Contact);
@@ -207,10 +208,33 @@ public class Index extends AppCompatActivity
                         Intent inte6 = new Intent(Index.this, ActivityLycee3.class);
                         startActivity(inte6);
                         break;
+
+                    case "ENSA":
+                        Intent inte8 = new Intent(Index.this, Activity_ENSA.class);
+                        startActivity(inte8);
+                        break;
+
+                    case "ENCG":
+                        Intent inte9 = new Intent(Index.this, Activity_ENCG.class);
+                        startActivity(inte9);
+                        break;
+
+                    case "CPGE":
+                        Intent inte10 = new Intent(Index.this, Activity_CPGE.class);
+                        startActivity(inte10);
+                        break;
+
+                    case "Contact":
+                        Intent inte12 = new Intent(Index.this, Contact.class);
+                        startActivity(inte12);
+                        break;
+
                     case "Déconnexion" :
                         mAuth.signOut();
-                        Intent inte7 = new Intent(mContext,MainActivity.class);
-                        startActivity(inte7);
+                        Intent inte11 = new Intent(mContext,MainActivity.class);
+                        startActivity(inte11);
+
+
                 }
                 return false;
             }
