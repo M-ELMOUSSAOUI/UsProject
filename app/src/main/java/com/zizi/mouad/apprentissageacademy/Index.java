@@ -1,6 +1,7 @@
 package com.zizi.mouad.apprentissageacademy;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.zizi.mouad.apprentissageacademy.Adapters.ExpandableAdapter;
 
 import java.util.ArrayList;
@@ -27,7 +29,6 @@ import java.util.List;
 public class Index extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     NavigationView navigationView;
-
     private ViewFlipper v_fliper;
     android.widget.ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
@@ -35,21 +36,28 @@ public class Index extends AppCompatActivity
     HashMap<String, List<String>> listDataChild;
     LinearLayout ll;
 
+    //Firebase Variables
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mContext = Index.this;
+        //Animation header
         navigationView = findViewById(R.id.nav_view);
-
         View header = navigationView.getHeaderView(0);
-
         ll = header.findViewById(R.id.ll1);
         AnimationDrawable animationDrawable = (AnimationDrawable) ll.getBackground();
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(2000);
         animationDrawable.start();
+        //Instance Firebase
+        mAuth = FirebaseAuth.getInstance();
 
         expListView = findViewById(R.id.expandableListView);
         prepareListData();
@@ -199,6 +207,10 @@ public class Index extends AppCompatActivity
                         Intent inte6 = new Intent(Index.this, ActivityLycee3.class);
                         startActivity(inte6);
                         break;
+                    case "Déconnexion" :
+                        mAuth.signOut();
+                        Intent inte7 = new Intent(mContext,MainActivity.class);
+                        startActivity(inte7);
                 }
                 return false;
             }
