@@ -19,7 +19,7 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
     //icons
-    private int[] icons = {R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery,R.drawable.ic_menu_send,R.drawable.ic_menu_share};
+    private int[] icons = {R.drawable.ic_menu_camera,R.drawable.ic_menu_gallery,R.drawable.ic_menu_send,R.drawable.ic_menu_share,R.drawable.ic_course};
 
     public ExpandableAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
