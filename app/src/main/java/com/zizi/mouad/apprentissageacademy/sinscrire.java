@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,7 @@ public class sinscrire extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private Context mContext;
+    private ProgressBar bar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class sinscrire extends AppCompatActivity {
         Password2 = findViewById(R.id.PasswordSinscrire2);
         Phone = findViewById(R.id.TelephoneSinscrire);
         CreatCompte = findViewById(R.id.Creat);
+        bar2 = findViewById(R.id.signup_progress_Bar);
 
         //OnClick activity
         CreatCompte.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +97,7 @@ public class sinscrire extends AppCompatActivity {
             Password2.requestFocus();
             return;
         }
+        bar2.setVisibility(View.VISIBLE);
         //add new User
         mAuth.createUserWithEmailAndPassword(stringEmail, stringPassword1)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -101,12 +105,13 @@ public class sinscrire extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Toast.makeText(mContext, "Succes", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, "Bienvenue", Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(mContext, Index.class);
                             finishAffinity();
                             startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.
+                            bar2.setVisibility(View.INVISIBLE);
                             Toast.makeText(mContext, "Utilisateur Deja existe",
                                     Toast.LENGTH_SHORT).show();
                         }
@@ -114,4 +119,11 @@ public class sinscrire extends AppCompatActivity {
                 });
     }
 
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        bar2.setVisibility(View.INVISIBLE);
+    }
 }

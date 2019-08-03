@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+
 import android.view.MenuItem;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -138,7 +142,7 @@ public class Index extends AppCompatActivity
         listDataHeader.add("Lycée");
         listDataHeader.add("Supérieur");
         listDataHeader.add("Contact");
-        listDataHeader.add("Profil");
+        listDataHeader.add("Déconnexion");
 
         // Adding child data
         List<String> College = new ArrayList<String>();
@@ -161,15 +165,15 @@ public class Index extends AppCompatActivity
         Contact.add("Contact");*/
 
 
-        List<String> Profil = new ArrayList<String>();
-        Profil.add("Déconnexion");
+        /*List<String> Profil = new ArrayList<String>();
+        Profil.add("Déconnexion");*/
 
         // Header, Child data
         listDataChild.put(listDataHeader.get(0), College);
         listDataChild.put(listDataHeader.get(1), hight_school);
         listDataChild.put(listDataHeader.get(2), unversity);
         //listDataChild.put(listDataHeader.get(3), Contact);
-        listDataChild.put(listDataHeader.get(4), Profil);
+        //listDataChild.put(listDataHeader.get(4), Profil);
     }
 
     private void populateExpandableList() {
@@ -224,11 +228,6 @@ public class Index extends AppCompatActivity
                         startActivity(inte10);
                         break;
 
-                    case "Déconnexion" :
-                        mAuth.signOut();
-                        Intent inte11 = new Intent(mContext,MainActivity.class);
-                        finishAffinity();
-                        startActivity(inte11);
                 }
                 return false;
             }
@@ -238,12 +237,16 @@ public class Index extends AppCompatActivity
             @Override
             public boolean onGroupClick(ExpandableListView expandableListView, View view, int i, long l) {
                 final String selc = listAdapter.getGroup(i).toString();
-                if (selc.equals("Contact" ))
-                {
+                if (selc.equals("Contact")) {
                     Intent inte12 = new Intent(Index.this, Contact.class);
                     startActivity(inte12);
                 }
-
+                if (selc.equals("Déconnexion")) {
+                    mAuth.signOut();
+                    Intent inte11 = new Intent(mContext, MainActivity.class);
+                    finishAffinity();
+                    startActivity(inte11);
+                }
                 return false;
             }
         });
