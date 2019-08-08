@@ -5,6 +5,7 @@ import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //internetIsConnected();
+
     }
     // Error Messages
 
@@ -136,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         mAuth.addAuthStateListener(mAuthListener);
 
+
     }
 
     @Override
@@ -143,6 +150,38 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         if (mAuthListener != null) mAuth.removeAuthStateListener(mAuthListener);
         bar1.setVisibility(View.GONE);
+    }
+
+    //Cheking the internet
+    private void internetIsConnected() {
+
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                ConnectivityManager manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+
+                //For 3G check
+                boolean is3g = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
+                        .isConnectedOrConnecting();
+                //For WiFi Check
+                boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
+                        .isConnectedOrConnecting();
+
+
+                if (!is3g && !isWifi)
+                {
+                    Toast.makeText(getApplicationContext(),"Network Connection is OFF", Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Network Connection is ON", Toast.LENGTH_LONG).show();
+
+                }
+            }
+        }, 0, 3000);
     }
 }
 

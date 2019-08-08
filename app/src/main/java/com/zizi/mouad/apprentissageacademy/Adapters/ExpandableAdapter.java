@@ -57,8 +57,6 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
         TextView txtListChild = convertView
                 .findViewById(R.id.lblListItem);
         txtListChild.setText(childText);
-        Animation animation = AnimationUtils.loadAnimation(_context,R.anim.slide_left);
-        convertView.startAnimation(animation);
         return convertView;
     }
 

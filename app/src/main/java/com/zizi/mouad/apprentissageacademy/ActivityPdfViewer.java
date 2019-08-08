@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -19,6 +22,7 @@ import java.net.URL;
 public class ActivityPdfViewer extends AppCompatActivity {
     PDFView pdf;
     String url;
+    ProgressBar bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,7 @@ public class ActivityPdfViewer extends AppCompatActivity {
         Bundle b = this.getIntent().getExtras();
         url = b.getString("c1");
         pdf = findViewById(R.id.pdf_view);
+        bar =findViewById(R.id.pdf_bar);
 
         try {
             URL u = new URL(url);
@@ -35,6 +40,8 @@ public class ActivityPdfViewer extends AppCompatActivity {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         new RetrievePDFStream().execute(url);
+
+
     }
 
     class RetrievePDFStream extends AsyncTask<String, Void, InputStream> {
@@ -59,7 +66,18 @@ public class ActivityPdfViewer extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(InputStream inputStream) {
-            pdf.fromStream(inputStream).load();
+
+            pdf.fromStream(inputStream).onLoad(new OnLoadCompleteListener() {
+                @Override
+                public void loadComplete(int nbPages) {
+                    bar.setVisibility(View.INVISIBLE);
+                    Toast.makeText(ActivityPdfViewer.this, "Loaded"+String.valueOf(nbPages), Toast.LENGTH_SHORT).show();
+
+                }
+            }).load();
         }
     }
+
+
+
 }
