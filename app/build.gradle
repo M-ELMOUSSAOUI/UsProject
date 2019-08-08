@@ -28,10 +28,12 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
 
+    implementation 'com.github.barteksc:android-pdf-viewer:3.1.0-beta.1'
+
     implementation 'com.google.firebase:firebase-core:17.0.1'
     implementation 'com.google.firebase:firebase-auth:18.1.0'
 
-    implementation files('libs/activation.jar', 'libs/additional.jar' , 'libs/mail.jar')
+    implementation files('libs/activation.jar', 'libs/additional.jar', 'libs/mail.jar')
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'

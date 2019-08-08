@@ -52,6 +52,7 @@ public class Index extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mContext = Index.this;
+
         //Animation header
         navigationView = findViewById(R.id.nav_view);
         View header = navigationView.getHeaderView(0);
@@ -60,6 +61,7 @@ public class Index extends AppCompatActivity
         animationDrawable.setEnterFadeDuration(2000);
         animationDrawable.setExitFadeDuration(2000);
         animationDrawable.start();
+
         //Instance Firebase
         mAuth = FirebaseAuth.getInstance();
 

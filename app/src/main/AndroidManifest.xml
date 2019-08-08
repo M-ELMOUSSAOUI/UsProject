@@ -4,6 +4,8 @@
     package="com.zizi.mouad.apprentissageacademy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,11 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
+        <activity android:name=".ActivityPdfViewer"></activity>
         <activity
             android:name=".Contact"
-            android:parentActivityName=".Index"/>
+            android:parentActivityName=".Index"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".Activity_CPGE"
             android:parentActivityName=".Index" />
@@ -44,8 +46,11 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".sinscrire"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -2,7 +2,6 @@ package com.zizi.mouad.apprentissageacademy.Adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,16 +15,15 @@ import com.zizi.mouad.apprentissageacademy.R;
 import java.util.HashMap;
 import java.util.List;
 
-public class ExpandableAdapter extends BaseExpandableListAdapter {
+public class ListCoursAdapter extends BaseExpandableListAdapter {
     private Context _context;
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
-    //icons
-    private int[] icons = {R.drawable.ic_course,R.drawable.ic_school,R.drawable.ic_mortarboard,R.drawable.ic_phone_book,R.drawable.ic_logout};
 
-    public ExpandableAdapter(Context context, List<String> listDataHeader,
-                                 HashMap<String, List<String>> listChildData) {
+
+    public ListCoursAdapter(Context context, List<String> listDataHeader,
+                             HashMap<String, List<String>> listChildData) {
         this._context = context;
         this._listDataHeader = listDataHeader;
         this._listDataChild = listChildData;
@@ -64,7 +62,6 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        if (groupPosition == 3 || groupPosition == 4) return 0;
         return this._listDataChild.get(this._listDataHeader.get(groupPosition))
                 .size();
     }
@@ -97,7 +94,6 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
         TextView lblListHeader = (TextView) convertView
                 .findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
-        lblListHeader.setCompoundDrawablesWithIntrinsicBounds(0,0,icons[groupPosition],0);
         lblListHeader.setText(headerTitle);
 
         return convertView;
