@@ -4,6 +4,7 @@ package com.zizi.mouad.apprentissageacademy;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 
@@ -21,6 +22,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +31,8 @@ import com.zizi.mouad.apprentissageacademy.Adapters.ExpandableAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Index extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -85,6 +89,9 @@ public class Index extends AppCompatActivity
                 FlipperImages(image);
             }
         }
+
+
+
     }
 
     public void FlipperImages(int images) {
@@ -100,7 +107,6 @@ public class Index extends AppCompatActivity
 
         v_fliper.setInAnimation(this, android.R.anim.slide_in_left);
         v_fliper.setOutAnimation(this, android.R.anim.slide_out_right);
-
 
     }
 
@@ -253,4 +259,6 @@ public class Index extends AppCompatActivity
             }
         });
     }
+
+
 }

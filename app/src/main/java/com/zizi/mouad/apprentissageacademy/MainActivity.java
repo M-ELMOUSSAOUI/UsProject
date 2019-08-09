@@ -81,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //internetIsConnected();
-
     }
     // Error Messages
 
@@ -152,37 +150,7 @@ public class MainActivity extends AppCompatActivity {
         bar1.setVisibility(View.GONE);
     }
 
-    //Cheking the internet
-    private void internetIsConnected() {
 
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask()
-        {
-            @Override
-            public void run()
-            {
-                ConnectivityManager manager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-
-                //For 3G check
-                boolean is3g = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
-                        .isConnectedOrConnecting();
-                //For WiFi Check
-                boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
-                        .isConnectedOrConnecting();
-
-
-                if (!is3g && !isWifi)
-                {
-                    Toast.makeText(getApplicationContext(),"Network Connection is OFF", Toast.LENGTH_LONG).show();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Network Connection is ON", Toast.LENGTH_LONG).show();
-
-                }
-            }
-        }, 0, 3000);
-    }
 }
 
 
