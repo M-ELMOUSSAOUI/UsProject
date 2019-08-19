@@ -32,6 +32,8 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-core:17.0.1'
     implementation 'com.google.firebase:firebase-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
+
 
     implementation files('libs/activation.jar', 'libs/additional.jar', 'libs/mail.jar')
 

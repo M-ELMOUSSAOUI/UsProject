@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "357397787055-do1utm2jphdac5don6b09gqcueehp9ct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zizi.mouad.apprentissageacademy",
+            "certificate_hash": "23220d6b6ba63e833a212f55780601c5651a548d"
+          }
+        },
+        {
           "client_id": "357397787055-qq8tq7do7688nva2t3eat1bnuk4tv4ru.apps.googleusercontent.com",
           "client_type": 3
         }
