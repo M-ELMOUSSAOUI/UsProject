@@ -30,6 +30,8 @@ public class ActivityPdfViewer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_viewer);
+        //remove Action bar
+        getSupportActionBar().hide();
 
         Bundle b = this.getIntent().getExtras();
         url = b.getString("c1");

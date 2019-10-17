@@ -2,6 +2,8 @@ package com.zizi.mouad.apprentissageacademy;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,8 @@ public class ActivityLycee2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lycee2);
+        ActionBar bar = getSupportActionBar();
+        bar.setTitle("2éme année Lycée");
 
         //init wideget
         tabLayout = findViewById(R.id.tab_lyc_2);

@@ -19,7 +19,8 @@
         <activity
             android:name=".Contact"
             android:parentActivityName=".Index"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden"
+            />
         <activity
             android:name=".Activity_CPGE"
             android:parentActivityName=".Index" />
@@ -41,7 +42,8 @@
         <activity
             android:name=".Index"
             android:label="@string/title_activity_index"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PrivacyPolicy"
             android:parentActivityName=".MainActivity" />
@@ -60,7 +62,9 @@
         </activity>
         <activity
             android:name=".ActivityCollege1"
-            android:parentActivityName=".Index" />
+            android:parentActivityName=".Index"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".ActivityCollege2"
             android:parentActivityName=".Index" />

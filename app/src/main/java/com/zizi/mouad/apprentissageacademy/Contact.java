@@ -3,6 +3,8 @@ package com.zizi.mouad.apprentissageacademy;
 
 import android.os.Bundle;
 import com.zizi.mouad.apprentissageacademy.MainHelpers.GMailSender;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -24,6 +26,8 @@ public class Contact extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        ActionBar bar = getSupportActionBar();
+        bar.setTitle("Contact");
         etName = findViewById(R.id.nameContact);
         etMessage = findViewById(R.id.MessageContact);
         btnSend = findViewById(R.id.SendMessageContact);

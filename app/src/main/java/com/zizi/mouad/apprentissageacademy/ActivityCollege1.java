@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -31,6 +32,8 @@ public class ActivityCollege1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_college1);
+        ActionBar bar = getSupportActionBar();
+        bar.setTitle("1er année collége");
 
         //init wideget
         tabLayout = findViewById(R.id.tab_col_1);
@@ -46,12 +49,6 @@ public class ActivityCollege1 extends AppCompatActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                
                 if (position==1)
                 {
                     FragmentManager fm = getSupportFragmentManager();
@@ -59,6 +56,12 @@ public class ActivityCollege1 extends AppCompatActivity {
                     dialog.setCancelable(false);
                     dialog.show(fm,"test");
                 }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                
+
             }
 
             @Override

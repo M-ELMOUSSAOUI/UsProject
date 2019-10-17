@@ -3,6 +3,8 @@ package com.zizi.mouad.apprentissageacademy;
 import android.os.Bundle;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,8 @@ public class ActivityCollege3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_college3);
+        ActionBar bar = getSupportActionBar();
+        bar.setTitle("3éme année collége");
 
         //init wideget
         tabLayout = findViewById(R.id.tab_col_3);

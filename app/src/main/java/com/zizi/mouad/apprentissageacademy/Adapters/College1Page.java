@@ -23,7 +23,6 @@ public class College1Page extends FragmentPagerAdapter {
         switch (position) {
             case 0 : fragment = new CoursCollege1();
             break;
-
             case 1 : fragment= new VideoCollege1();
             break;
 

@@ -59,6 +59,7 @@ public class CustomDialog extends DialogFragment {
             }
         });
 
+
         return v;
     }
 
