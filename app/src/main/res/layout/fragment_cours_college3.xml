@@ -6,9 +6,9 @@
     tools:context=".AFragments.CoursCollege3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Cours College 3" />
+        android:id="@+id/exp_list_col3" />
 
 </FrameLayout>

@@ -11,7 +11,9 @@
         android:paddingStart="?android:attr/expandableListPreferredChildPaddingLeft"
         android:textSize="20sp"
         android:textAlignment="textStart"
+        android:paddingRight="15dp"
         android:layout_marginTop="15dp"
+
         />
 
 </LinearLayout>

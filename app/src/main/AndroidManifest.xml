@@ -14,13 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityVideoView"></activity>
         <activity android:name=".ActivityPdfViewer" />
         <activity
             android:name=".Contact"
             android:parentActivityName=".Index"
-            android:windowSoftInputMode="stateHidden"
-            />
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".Activity_CPGE"
             android:parentActivityName=".Index" />
@@ -42,8 +40,8 @@
         <activity
             android:name=".Index"
             android:label="@string/title_activity_index"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PrivacyPolicy"
             android:parentActivityName=".MainActivity" />
@@ -63,8 +61,7 @@
         <activity
             android:name=".ActivityCollege1"
             android:parentActivityName=".Index"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ActivityCollege2"
             android:parentActivityName=".Index" />

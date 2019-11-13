@@ -20,6 +20,7 @@ public class ListCoursAdapter extends BaseExpandableListAdapter {
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
+    private boolean canPlay = true;
 
 
     public ListCoursAdapter(Context context, List<String> listDataHeader,
