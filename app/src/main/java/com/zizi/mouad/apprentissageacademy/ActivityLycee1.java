@@ -29,11 +29,27 @@ public class ActivityLycee1 extends AppCompatActivity {
         tabCours = findViewById(R.id.cours_tabl1);
         tabVideo = findViewById(R.id.video_tabl1);
 
-        pagerAdapter = new Lycee1Page(getSupportFragmentManager());
+        pagerAdapter = new Lycee1Page(getSupportFragmentManager(),2);
         viewPager.setAdapter(pagerAdapter);
 
 
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 }

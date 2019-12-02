@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.zizi.mouad.apprentissageacademy.R;
@@ -20,7 +21,6 @@ public class ListCoursAdapter extends BaseExpandableListAdapter {
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
-    private boolean canPlay = true;
 
 
     public ListCoursAdapter(Context context, List<String> listDataHeader,

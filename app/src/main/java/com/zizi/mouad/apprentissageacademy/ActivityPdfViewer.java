@@ -34,7 +34,7 @@ public class ActivityPdfViewer extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Bundle b = this.getIntent().getExtras();
-        url = b.getString("c1");
+        url = b.getString("m1");
         pdf = findViewById(R.id.pdf_view);
         bar = findViewById(R.id.pdf_bar);
         txt = findViewById(R.id.txt2);

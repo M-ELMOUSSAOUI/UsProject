@@ -1,5 +1,6 @@
 package com.zizi.mouad.apprentissageacademy.AFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 
+import com.zizi.mouad.apprentissageacademy.ActivityPdfViewer;
 import com.zizi.mouad.apprentissageacademy.Adapters.ListCoursAdapter;
 import com.zizi.mouad.apprentissageacademy.R;
 
@@ -23,6 +25,8 @@ public class CoursCollege3 extends Fragment {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
     private ListCoursAdapter listAdapter;
+    private String Url ="https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F2.pdf?alt=media&token=de802e46-f506-4f7f-881a-2025ece15ab4";
+
 
 
     public CoursCollege3() {
@@ -49,10 +53,95 @@ public class CoursCollege3 extends Fragment {
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                final String selected = (String) listAdapter.getChild(i, i1);
-                switch (selected)
-                {
+                final int GrpSelect = i;
+                switch (GrpSelect) {
+                    case 0: {
 
+                        Bundle b = new Bundle();
+                        b.putString("m1", Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+                        break;
+
+                    }
+
+                    case 1: {
+
+                        Bundle b = new Bundle();
+                        b.putString("m1", Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+                        break;
+
+                    }
+
+                    case 2: {
+
+                        Bundle b = new Bundle();
+                        b.putString("m1", Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+                        break;
+
+                    }
+
+                    case 3: {
+
+                        Bundle b = new Bundle();
+                        b.putString("m1", Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+                        break;
+
+                    }
+
+                    case 4: {
+
+                        Bundle b = new Bundle();
+                        b.putString("m1",Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+                        break;
+
+                    }
+
+                    case 5: {
+
+                        Bundle b = new Bundle();
+                        b.putString("m1", Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+                        break;
+
+                    }
+                    case 6: {
+
+                        Bundle b = new Bundle();
+                        b.putString("m1", Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+
+                    }
+                    break;
+
+
+                    case 7: {
+
+                        Bundle b = new Bundle();
+                        b.putString("m1", Url);
+                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                        inte.putExtras(b);
+                        startActivity(inte);
+                        break;
+
+                    }
 
                 }
 

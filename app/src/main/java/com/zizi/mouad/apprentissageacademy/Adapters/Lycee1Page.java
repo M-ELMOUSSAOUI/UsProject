@@ -10,9 +10,11 @@ import com.zizi.mouad.apprentissageacademy.AFragments.VideoLycee1;
 
 
 public class Lycee1Page extends FragmentPagerAdapter {
+    private int numOfTab;
 
-    public Lycee1Page(FragmentManager fm) {
+    public Lycee1Page(FragmentManager fm,int numOfPage) {
         super(fm);
+        this.numOfTab=numOfPage;
 
     }
 
@@ -33,6 +35,6 @@ public class Lycee1Page extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return numOfTab;
     }
 }
