@@ -6,9 +6,10 @@
     tools:context=".AFragments.VideoLycee3">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ExpandableListView
+        android:id="@+id/exp_list_lycv3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent"/>
 
 </FrameLayout>

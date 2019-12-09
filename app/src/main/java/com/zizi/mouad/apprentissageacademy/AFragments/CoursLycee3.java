@@ -25,7 +25,7 @@ public class CoursLycee3 extends Fragment {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
     private ListCoursAdapter listAdapter;
-    private String Url ="https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F2.pdf?alt=media&token=de802e46-f506-4f7f-881a-2025ece15ab4";
+    private String url = "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/test%20(1).pdf?alt=media&token=fe247f34-8542-4ec4-a3a0-d05bf2d72dfe";
 
 
 
@@ -56,97 +56,12 @@ public class CoursLycee3 extends Fragment {
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                final int GrpSelect = i;
-                switch (GrpSelect) {
-                    case 0: {
 
-                        Bundle b = new Bundle();
-                        b.putString("m1", Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 1: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 2: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 3: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 4: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1",Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 5: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-                    case 6: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-
-                    }
-                    break;
-
-
-                    case 7: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Url);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                }
+                Bundle b = new Bundle();
+                b.putString("m1", url);
+                Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                inte.putExtras(b);
+                startActivity(inte);
 
 
                 return false;
@@ -161,13 +76,16 @@ public class CoursLycee3 extends Fragment {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Matier1");
-        listDataHeader.add("Matier2");
-        listDataHeader.add("Matier3");
-        listDataHeader.add("Matier4");
-        listDataHeader.add("Matier5");
-        listDataHeader.add("Matier6");
-        listDataHeader.add("Matier7");
+        listDataHeader.add("الرياضيات");
+        listDataHeader.add("الفيزياء والكيمياء ");
+        listDataHeader.add("علوم الحياة والأرض");
+        listDataHeader.add("اللغة العربية");
+        listDataHeader.add("اللغة الفرنسية");
+        listDataHeader.add("المحاسبة والرياضيات المالية");
+        listDataHeader.add("الفلسفة");
+        listDataHeader.add("اللغة الانجليزية");
+        listDataHeader.add("التنظيم الإداري للمقاولات");
+
 
         // Adding child data
         List<String> Matier1 = new ArrayList<String>();

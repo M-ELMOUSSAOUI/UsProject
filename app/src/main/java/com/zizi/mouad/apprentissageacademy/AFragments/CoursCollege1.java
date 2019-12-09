@@ -35,38 +35,9 @@ public class CoursCollege1 extends Fragment {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
     private ListCoursAdapter listAdapter;
+    private String url = "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/test%20(1).pdf?alt=media&token=fe247f34-8542-4ec4-a3a0-d05bf2d72dfe";
 
-    private String[] Mat1urls = {"https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FMatier1%2F%D9%86%D8%B8%D8%A7%D9%85-%D8%A7%D9%84%D8%A3%D8%B3%D8%B1%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A5%D8%B3%D9%84%D8%A7%D9%85.docx?alt=media&token=73742d63-2a27-4c1d-a0eb-d6af5768101c"};
-    private String[] Mat2urls = {"https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FMatier1%2Favis_adj_adm_05052019.pdf?alt=media&token=c50a55e2-74d9-43b9-abbf-d53d62d67085"};
-    private String[] Mat3urls = {};
-    private String[] Mat4urls = {};
-    private String[] Mat5urls = {};
-    private String[] Mat6urls = {};
-    private String[] Mat7urls = {"","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""};
-    private String[] Mat8urls = {"https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F1.pdf?alt=media&token=7f60d158-c439-4d45-8430-0d1cc5eb1b5a",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F2.pdf?alt=media&token=de802e46-f506-4f7f-881a-2025ece15ab4",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F3.pdf?alt=media&token=c12961ae-eec5-41b3-a1c3-9a4e14ab8d22",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F4.pdf?alt=media&token=53cceac4-ff07-40e0-8f51-eda2db630926",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F5.pdf?alt=media&token=fa25ef1d-286c-4f89-8e65-58e252872074",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F6.pdf?alt=media&token=275160e0-7a45-4537-9ea2-b28e08068219",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F7.pdf?alt=media&token=43108dad-1c11-48b9-bf84-cc210d290998",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F8.pdf?alt=media&token=699c5639-e5f4-42e3-a9e5-d154dfe1261c",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F9.pdf?alt=media&token=8bb61922-5fdb-461d-a555-1d6fc900eb34",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F10.pdf?alt=media&token=0e10c649-b7db-459e-b39d-50dc6995cdfa",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F11.pdf?alt=media&token=8cce1b65-4450-4699-889e-77d4624165c5",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F12.pdf?alt=media&token=fae7b7a0-7994-4801-89e9-e182f3f7cb0a",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F13.pdf?alt=media&token=e118f7c9-0342-412c-a0c0-324e0f32c6b0",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F14.pdf?alt=media&token=35a81978-5142-4292-9471-72548a215e71",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F15.pdf?alt=media&token=1bfefe75-cd07-4163-bffb-768f55371e9b",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F16.pdf?alt=media&token=879aa40b-b735-4c98-8cf6-3adf00f9fe4d",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F17.pdf?alt=media&token=a1a6185e-291b-497f-af05-22a494839a51",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F18.pdf?alt=media&token=16778921-9a54-49e4-b833-3a83b6d8eedd",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F19.pdf?alt=media&token=093703fc-5989-462f-8874-128b243dde10",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F20.pdf?alt=media&token=4e45dda7-dd0a-4ef4-859c-b967949a53d3\n",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F21.pdf?alt=media&token=cf647207-56bf-41da-8752-7b87ec74d628\n",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F22.pdf?alt=media&token=413cd0a2-98aa-4ddf-8c18-3493581b4055\n",
-            "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/Cours%2FColl%C3%A9ge%2F1er%20Ann%C3%A9e%2FPhysc%2F23.pdf?alt=media&token=746a134d-fe12-43ac-98c2-4b86c340484e",
-            };
+
 
 
     public CoursCollege1() {
@@ -94,101 +65,13 @@ public class CoursCollege1 extends Fragment {
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                final int Grpselected = i;
 
-                switch (Grpselected) {
-                    case 0: {
+                Bundle b = new Bundle();
+                b.putString("m1", url);
+                Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
+                inte.putExtras(b);
+                startActivity(inte);
 
-                        Bundle b = new Bundle();
-                        b.putString("m1", Mat1urls[i1]);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 1: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Mat2urls[i1]);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 2: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Mat3urls[i1]);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 3: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Mat4urls[i1]);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 4: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Mat5urls[i1]);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-
-                    case 5: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Mat6urls[i1]);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-                    case 6: {
-                        if(Mat7urls.length!=0)
-                        {
-                            if (!Mat7urls[i1].isEmpty())
-                            {
-                                Bundle b = new Bundle();
-                                b.putString("m1", Mat7urls[i1]);
-                                Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                                inte.putExtras(b);
-                                startActivity(inte);
-                            }
-                            else Toast.makeText(getContext(), "Le course n'exsit pas maintenant", Toast.LENGTH_LONG).show();
-                        }
-                        break;
-
-                    }
-                    case 7: {
-
-                        Bundle b = new Bundle();
-                        b.putString("m1", Mat8urls[i1]);
-                        Intent inte = new Intent(getActivity(), ActivityPdfViewer.class);
-                        inte.putExtras(b);
-                        startActivity(inte);
-                        break;
-
-                    }
-                }
 
                 return false;
             }
@@ -202,6 +85,7 @@ public class CoursCollege1 extends Fragment {
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
+
         listDataHeader.add("الرياضيات");//mat1
         listDataHeader.add("التربية الاسلامية");//mat2
         listDataHeader.add("الجغرافيا");//mat3
@@ -210,7 +94,6 @@ public class CoursCollege1 extends Fragment {
         listDataHeader.add("اللغة العربية");//mat6
         listDataHeader.add("علوم الحياة والأرض");//mat7
         listDataHeader.add("الفيزياء والكيمياء ");//mat8
-
         // Adding child data
         List<String> Matier1 = new ArrayList<String>();
         {

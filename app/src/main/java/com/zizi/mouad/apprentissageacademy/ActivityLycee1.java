@@ -4,6 +4,7 @@ import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,7 +39,13 @@ public class ActivityLycee1 extends AppCompatActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+                if (position==1)
+                {
+                    FragmentManager fm = getSupportFragmentManager();
+                    CustomDialog dialog = new CustomDialog(viewPager,ActivityLycee1.this);
+                    dialog.setCancelable(false);
+                    dialog.show(fm,"test");
+                }
             }
 
             @Override
