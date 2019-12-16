@@ -159,13 +159,9 @@ public class CoursCollege2 extends Fragment {
 
         // Adding child data
         listDataHeader.add("الرياضيات");//mat1
-        listDataHeader.add("التربية الاسلامية");//mat2
-        listDataHeader.add("الجغرافيا");//mat3
-        listDataHeader.add("التربية على المواطنة");//mat4
-        listDataHeader.add("التاريخ");//mat5
-        listDataHeader.add("اللغة العربية");//mat6
-        listDataHeader.add("علوم الحياة والأرض");//mat7
         listDataHeader.add("الفيزياء والكيمياء ");//mat8
+        listDataHeader.add("علوم الحياة والأرض");//mat7
+        listDataHeader.add("اللغة العربية");//mat6
 
         // Adding child data
         List<String> Matier1 = new ArrayList<String>();
@@ -210,43 +206,12 @@ public class CoursCollege2 extends Fragment {
         Matier4.add("C8");
 
 
-        List<String> Matier5 = new ArrayList<String>();
-        Matier5.add("C1");
-        Matier5.add("C2");
-        Matier5.add("C3");
-        Matier5.add("C4");
-        Matier5.add("C5");
-        Matier5.add("C6");
-        Matier5.add("C7");
-        Matier5.add("C8");
 
-        List<String> Matier6 = new ArrayList<String>();
-        Matier6.add("C1");
-        Matier6.add("C2");
-        Matier6.add("C3");
-        Matier6.add("C4");
-        Matier6.add("C5");
-        Matier6.add("C6");
-        Matier6.add("C7");
-        Matier6.add("C8");
-
-        List<String> Matier7 = new ArrayList<String>();
-        Matier7.add("C1");
-        Matier7.add("C2");
-        Matier7.add("C3");
-        Matier7.add("C4");
-        Matier7.add("C5");
-        Matier7.add("C6");
-        Matier7.add("C7");
-        Matier7.add("C8");
 
         // Header, Child data
         listDataChild.put(listDataHeader.get(0), Matier1);
         listDataChild.put(listDataHeader.get(1), Matier2);
         listDataChild.put(listDataHeader.get(2), Matier3);
         listDataChild.put(listDataHeader.get(3), Matier4);
-        listDataChild.put(listDataHeader.get(4), Matier5);
-        listDataChild.put(listDataHeader.get(5), Matier6);
-        listDataChild.put(listDataHeader.get(6), Matier7);
     }
 }

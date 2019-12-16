@@ -71,7 +71,7 @@ public class CoursLycee1 extends Fragment {
         listDataHeader.add("الرياضيات");
         listDataHeader.add("الفيزياء والكيمياء ");
         listDataHeader.add("علوم الحياة والأرض");
-        listDataHeader.add("علوم المهندص");
+        listDataHeader.add("علوم المهندس");
 
 
         // Adding child data

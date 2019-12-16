@@ -23,17 +23,10 @@
                 android:id="@+id/ViewFliper"
                 android:layout_width="match_parent"
                 android:layout_height="250dp">
-
             </ViewFlipper>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Les information sur le centre et Les services de centre"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
 
-        </LinearLayout>
+       </LinearLayout>
 
     </ScrollView>
 

@@ -9,34 +9,46 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <LinearLayout
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="200dp"
-                android:src="@drawable/logo"/>
+                android:src="@drawable/logo" />
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
+
                 <TextView
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text="Apprentissage Academy"
                     android:textColor="@color/black"
-                    android:textSize="10sp"
+                    android:textSize="15sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Web: www.apprentissageacademy.com"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
                     tools:ignore="SmallSp" />
 
                 <TextView
@@ -45,60 +57,67 @@
                     android:layout_marginTop="10dp"
                     android:text="apprentisageacedemy@gmail.com"
                     android:textColor="@color/black"
-                    android:textSize="10sp"
-                    tools:ignore="SmallSp" />
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="+212 6 00 00 00 00"
-                    android:textColor="@color/black"
-                    android:textSize="10sp"
+                    android:textSize="15sp"
                     tools:ignore="SmallSp" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="+212 6 61 90 09 40"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    tools:ignore="SmallSp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="+212 5 37 75 07 07"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    tools:ignore="SmallSp" />
 
 
             </LinearLayout>
         </LinearLayout>
 
 
-
         <TextView
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Send a email"
-            android:textSize="30sp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Contactez nous"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/nameContact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="name*"
             android:autofillHints=""
-            tools:targetApi="o"
-            android:inputType="textPersonName" />
+            android:hint="nom "
+            android:inputType="textPersonName"
+            tools:targetApi="o" />
 
         <EditText
             android:id="@+id/MessageContact"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="20dp"
-            android:hint="Message"
             android:autofillHints=""
-            tools:targetApi="o"
-            android:inputType="text" />
+            android:hint="Message"
+            android:inputType="text"
+            tools:targetApi="o" />
 
         <Button
             android:id="@+id/SendMessageContact"
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Send Message"
+            android:layout_marginTop="20dp"
             android:background="@drawable/btn_style"
-            />
+            android:text="Envoyer un Message" />
 
     </LinearLayout>
 

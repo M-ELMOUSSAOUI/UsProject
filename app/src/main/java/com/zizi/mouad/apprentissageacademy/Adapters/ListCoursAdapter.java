@@ -10,7 +10,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-
 import com.zizi.mouad.apprentissageacademy.R;
 
 import java.util.HashMap;

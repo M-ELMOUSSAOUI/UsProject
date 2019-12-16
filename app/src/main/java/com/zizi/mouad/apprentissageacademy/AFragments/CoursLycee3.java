@@ -78,14 +78,11 @@ public class CoursLycee3 extends Fragment {
         // Adding child data
         listDataHeader.add("الرياضيات");
         listDataHeader.add("الفيزياء والكيمياء ");
-        listDataHeader.add("علوم الحياة والأرض");
-        listDataHeader.add("اللغة العربية");
-        listDataHeader.add("اللغة الفرنسية");
         listDataHeader.add("المحاسبة والرياضيات المالية");
         listDataHeader.add("الفلسفة");
         listDataHeader.add("اللغة الانجليزية");
         listDataHeader.add("التنظيم الإداري للمقاولات");
-
+        listDataHeader.add("الاقتصاد");
 
         // Adding child data
         List<String> Matier1 = new ArrayList<String>();

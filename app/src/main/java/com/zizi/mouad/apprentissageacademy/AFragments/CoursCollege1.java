@@ -87,7 +87,7 @@ public class CoursCollege1 extends Fragment {
         // Adding child data
 
         listDataHeader.add("الرياضيات");//mat1
-        listDataHeader.add("التربية الاسلامية");//mat2
+        listDataHeader.add("الفيزياء والكيمياء ");//mat2
         listDataHeader.add("الجغرافيا");//mat3
         listDataHeader.add("التربية على المواطنة");//mat4
         listDataHeader.add("التاريخ");//mat5
