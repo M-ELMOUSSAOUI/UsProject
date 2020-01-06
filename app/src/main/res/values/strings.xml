@@ -10,8 +10,6 @@
     <string name="privacy">by proceeding you are agree of service and privacy notice</string>
     <string name="telephone">Telephone</string>
     <string name="password2">Répéter le mot de passe</string>
-    <string name="facebook_app_id">[APP_ID]</string>
-    <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
     <string name="privacy_policy_page">Privacy policy page</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -39,4 +37,7 @@
     <string name="title_activity__encg">Activity_ENCG</string>
     <string name="title_activity__cpge">Activity_CPGE</string>
     <string name="title_activity_contact">Contact</string>
+    <string name="facebook_app_id">462974037743910</string>
+    <string name="fb_login_protocol_scheme">fb462974037743910</string>
+
 </resources>

@@ -1,6 +1,8 @@
 package com.zizi.mouad.apprentissageacademy.AFragments;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,6 +26,8 @@ public class VideoCollege3 extends Fragment {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
     private ListCoursAdapter listAdapter;
+    private String vidUrl = "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/animation%20final.mp4%20-%20Google%20Drive.mp4?alt=media&token=9a19bac3-ee56-464a-9daa-5174623ceb77";
+
 
     public VideoCollege3() {
         // Required empty public constructor
@@ -47,8 +51,9 @@ public class VideoCollege3 extends Fragment {
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
-                Toast.makeText(getActivity(), "Le video n'est pas exist maintenant", Toast.LENGTH_LONG).show();
-                return false;
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(vidUrl));
+                intent.setDataAndType(Uri.parse(vidUrl), "video/*");
+                startActivity(intent);                return false;
             }
         });
 

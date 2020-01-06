@@ -25,7 +25,7 @@ public class CoursCollege3 extends Fragment {
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
     private ListCoursAdapter listAdapter;
-    private String Url = "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/test%20(1).pdf?alt=media&token=fe247f34-8542-4ec4-a3a0-d05bf2d72dfe";
+    private String Url = "https://firebasestorage.googleapis.com/v0/b/apprenstisageaccademy.appspot.com/o/test%20(1).pdf?alt=media&token=a0260da2-02b0-40d9-96a1-2769a6a45599";
 
 
 

@@ -79,6 +79,7 @@ public class ActivityPdfViewer extends AppCompatActivity {
                 public void onError(Throwable t) {
                     txt.setText("Problem du connection réessayez plus tard");
                     txt.setTextSize(16);
+
                 }
             }).load();
         }
