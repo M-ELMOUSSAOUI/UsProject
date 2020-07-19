@@ -39,5 +39,8 @@
     <string name="title_activity_contact">Contact</string>
     <string name="facebook_app_id">462974037743910</string>
     <string name="fb_login_protocol_scheme">fb462974037743910</string>
+    <string name="_1_cours_soutien_nous_vous_proposons_les_meilleurs_professeurs_pour_vous_aider_dans_votre_projet_acad_mique_avec_nous_le_succ_s_sera_votre_ami_permanent">1- Cours soutien Nous vous proposons les meilleurs professeurs pour vous aider dans votre projet académique, Avec nous le succès sera votre ami permanent.</string>
+    <string name="_1_cours_soutien">1-Cours soutien</string>
+    <string name="nous_vous_proposons_les_meilleurs_professeurs_pour_vous_aider_dans_votre_projet_acad_mique_avec_nous_le_succ_s_sera_votre_ami_permanent">Nous vous proposons les meilleurs professeurs pour vous aider dans votre projet académique, Avec nous le succès sera votre ami permanent.</string>
 
 </resources>
